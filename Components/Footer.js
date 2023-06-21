@@ -13,7 +13,7 @@ export function Footer({navigation}){
         <View style= {styles.container}>
         
        <View style={styles.innerBox}>
-       <TouchableOpacity>
+       <TouchableOpacity onPress={()=> navigation.navigate("Home")}>
        <Image source= {homeIcon}  style={styles.iconStyle}  />
           </TouchableOpacity>
           <TouchableOpacity><Image source= {searchIcon}  style={styles.iconStyle}  /></TouchableOpacity>
