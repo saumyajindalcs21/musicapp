@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Image,StyleSheet } from "react-native";
+import { View,Image,StyleSheet,TouchableOpacity } from "react-native";
 
 
 const homeIcon=require('../assets/icons/home.png')
@@ -8,15 +8,21 @@ const musicIcon=require('../assets/icons/music.png')
 const profileIcon=require('../assets/icons/user.png')
 
 
-export function Footer(){
+export function Footer({navigation}){
     return(
         <View style= {styles.container}>
         
        <View style={styles.innerBox}>
+       <TouchableOpacity>
        <Image source= {homeIcon}  style={styles.iconStyle}  />
-       <Image source= {searchIcon}  style={styles.iconStyle}  />
-       <Image source= {musicIcon}  style={styles.iconStyle}  />
-       <Image source= {profileIcon}  style={styles.iconStyle} /> 
+          </TouchableOpacity>
+          <TouchableOpacity><Image source= {searchIcon}  style={styles.iconStyle}  /></TouchableOpacity>
+          <TouchableOpacity><Image source= {musicIcon}  style={styles.iconStyle}  /></TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("Profile")} >
+            <Image source= {profileIcon}  style={styles.iconStyle} /></TouchableOpacity> 
+       
+       
+        
         </View> 
         </View>
     )
