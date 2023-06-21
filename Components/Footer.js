@@ -16,8 +16,10 @@ export function Footer({navigation}){
        <TouchableOpacity onPress={()=> navigation.navigate("Home")}>
        <Image source= {homeIcon}  style={styles.iconStyle}  />
           </TouchableOpacity>
-          <TouchableOpacity><Image source= {searchIcon}  style={styles.iconStyle}  /></TouchableOpacity>
-          <TouchableOpacity><Image source= {musicIcon}  style={styles.iconStyle}  /></TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("Search")}>
+            <Image source= {searchIcon}  style={styles.iconStyle}  /></TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("Music")}>
+            <Image source= {musicIcon}  style={styles.iconStyle}  /></TouchableOpacity>
           <TouchableOpacity onPress={()=> navigation.navigate("Profile")} >
             <Image source= {profileIcon}  style={styles.iconStyle} /></TouchableOpacity> 
        
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
     container: {
        
         backgroundColor : 'black',
-        height: 60,
+        height: 70,
         width: '96%',
        /* margin: 10, */ 
         position: 'absolute',

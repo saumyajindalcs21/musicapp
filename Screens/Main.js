@@ -7,7 +7,10 @@ export function Main({navigation}){
         <View style= {styles.container}>
         
          <StatusBar style="auto" />
-         <Text>Home Screen</Text>
+         <Text style= {{
+                fontSize: 24,
+                fontWeight : '900',
+            }}>Home Screen</Text>
          <Footer navigation={navigation} />
         </View>
     )
@@ -16,7 +19,7 @@ export function Main({navigation}){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor : '#fff',
+        backgroundColor : '#FFBF00',
         width: '100%' ,
         alignContent: 'center',
         alignItems: 'center',

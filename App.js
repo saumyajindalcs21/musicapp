@@ -4,7 +4,8 @@ import { Main } from './Screens/Main';
 import { Profile } from './Screens/Profile';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
+import { Search } from './Screens/Search';
+import {Music} from './Screens/Music'
 const stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
       <stack.Navigator initialRouteName='Home'>
         <stack.Screen name='Home' component={Main} options={{headerShown: false}} />
         <stack.Screen name ='Profile' component={Profile} options={{headerShown: false}} />
+        <stack.Screen name ='Search' component={Search} options={{headerShown: false}} />
+        <stack.Screen name ='Music' component={Music} options={{headerShown: false}} />
       </stack.Navigator>
     
     </NavigationContainer>
@@ -29,7 +32,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FFBF00',
     alignItems: 'center',
     justifyContent: 'center',
   },
