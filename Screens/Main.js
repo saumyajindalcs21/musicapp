@@ -44,21 +44,16 @@ export function Main({navigation}){
                             <Text style={styles.dotFont}>...</Text>
                             </TouchableOpacity>
                             <View style={styles.playbox}>
-                                <View></View>
-                                <View>
-                                  <Text style={styles.musicName}>
-                                    The Dark Side
-                                    </Text>  
-                                    <View></View>
-                                    <Text style={styles.musicDesc}>
-                                       Muse -Simulation Theory
-                                    </Text>
-                                </View>
-                                <View>
-
-                                </View>
-                            </View>
-                        </View>
+                                <View style= {styles.playboxItem}>
+                                    <View>
+                                        <Text style={styles.musicName}>The Dark Side</Text>
+                                    </View>
+                                    <View>
+                                        <Text style={styles.musicDesc}>Music Simulation Theory</Text>
+                                    </View>
+                             </View>
+                             </View>
+                            </View>        
                     </ScrollView>
                     </View>
                     {/* trending cards end */}
@@ -144,14 +139,33 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize:29,
         fontWeight:'600',
+    },
     playbox:{
         position: 'absolute',
         zIndex:999,
-        backgroundColor: 'rgba(61, 41, 148,0.5)',
         bottom:0,
+        padding:20,
+        width:'100%',
+        
     },
     musicName:{
-        color:'#fff'
+        color:'#fff',
+        fontWeight : '900',
+        fontSize:16,
+    },
+    musicDesc:{
+        color:'#1C8281',
+        fontWeight : '700',
+        fontSize:13,
+       
+    },
+    playboxItem:{
+      //  backgroundColor: 'rgba(61,41,148,0.5)'
+      backgroundColor: '#2E1F79',
+      height:55,
+      width:'100%',
+      padding:10,
+      borderRadius:15,
     }
-    }
+    
 })
