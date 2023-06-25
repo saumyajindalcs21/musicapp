@@ -34,15 +34,15 @@ const styles = StyleSheet.create({
     container: {
        
         backgroundColor : '#323B4C',
-        height: 60,
-        width: '96%',
+        height: 50,
+        width: '91%',
        /* margin: 10, */ 
         position: 'absolute',
         bottom: 18,
         alignContent: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius:25,
+        borderRadius:20,
         
     },
     innerBox: {
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     iconStyle: {
-        height: 30,
+        height: 20,
+        resizeMode:'contain',
         width: 30,
         tintColor: '#fff',
     }
