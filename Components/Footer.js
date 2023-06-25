@@ -33,16 +33,16 @@ export function Footer({navigation}){
 const styles = StyleSheet.create({
     container: {
        
-        backgroundColor : 'black',
-        height: 70,
+        backgroundColor : '#323B4C',
+        height: 60,
         width: '96%',
        /* margin: 10, */ 
         position: 'absolute',
-        bottom: 7,
+        bottom: 18,
         alignContent: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 90,
+        borderRadius:25,
         
     },
     innerBox: {

@@ -17,7 +17,7 @@ export function Search({navigation}){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#CCCCFF',
+      backgroundColor: '#343549',
       alignItems: 'center',
       justifyContent: 'center',
     },

@@ -76,7 +76,7 @@ export function Main({navigation}){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor : '#7f7eae',
+        backgroundColor : '#2d2e37',
         width: '100%' ,
         alignContent: 'center',
         alignItems: 'center',
@@ -115,9 +115,9 @@ const styles = StyleSheet.create({
         opacity: 0.45,
     },
     mainHeading:{
-        fontSize:26,
-        color: '#fff',
-        fontWeight: '700'
+        fontSize:28,
+        color: '#c4c4c4',
+        fontWeight: '200'
     },
     card:{
          width:'70%',
@@ -149,14 +149,15 @@ const styles = StyleSheet.create({
         
     },
     musicName:{
-        color:'#fff',
+        color:'#FFFEFE',
         fontWeight : '900',
         fontSize:16,
     },
     musicDesc:{
-        color:'#1C8281',
-        fontWeight : '700',
-        fontSize:13,
+        color:'#FFFEFE',
+        fontWeight : '100',
+        bottom:1,
+        fontSize:12,
        
     },
     playboxItem:{
