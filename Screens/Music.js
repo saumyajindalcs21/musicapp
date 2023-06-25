@@ -17,7 +17,7 @@ export function Music({navigation}){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#AED6F1',
+      backgroundColor: 'rgba(180, 150, 200, 0.8)',
       alignItems: 'center',
       justifyContent: 'center',
     },

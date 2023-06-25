@@ -17,7 +17,7 @@ export function Profile({navigation}){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#95A5A6',
+      backgroundColor: 'rgba(150, 150, 150,0.9)',
       alignItems: 'center',
       justifyContent: 'center',
     },

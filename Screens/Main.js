@@ -44,14 +44,16 @@ export function Main({navigation}){
                             <Text style={styles.dotFont}>...</Text>
                             </TouchableOpacity>
                             <View style={styles.playbox}>
+                            <TouchableOpacity>
                                 <View style= {styles.playboxItem}>
                                     <View>
-                                        <Text style={styles.musicName}>The Dark Side</Text>
+                                        <Text style={styles.musicName}>Faded</Text>
                                     </View>
                                     <View>
-                                        <Text style={styles.musicDesc}>Music Simulation Theory</Text>
+                                        <Text style={styles.musicDesc}>🎵  song by Alan Walker</Text>
                                     </View>
                              </View>
+                             </TouchableOpacity>
                              </View>
                             </View>        
                     </ScrollView>
@@ -76,7 +78,7 @@ export function Main({navigation}){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor : '#2d2e37',
+        backgroundColor : '#1C8EAC',
         width: '100%' ,
         alignContent: 'center',
         alignItems: 'center',
@@ -115,18 +117,19 @@ const styles = StyleSheet.create({
         opacity: 0.45,
     },
     mainHeading:{
-        fontSize:28,
+        fontSize:22,
         color: '#c4c4c4',
-        fontWeight: '200'
+        fontWeight: '700'
     },
     card:{
          width:'70%',
          borderRadius:45,
-         height: 180,
+         height: 185,
+         resizeMode:'contain',
     },
     cardImg:{
         width:'100%',
-        height: 180,
+        height: 185,
         borderRadius:45,
         resizeMode:'contain'
     },
@@ -144,7 +147,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         zIndex:999,
         bottom:0,
-        padding:20,
+        padding:15,
         width:'100%',
         
     },
