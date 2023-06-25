@@ -78,7 +78,7 @@ export function Main({navigation}){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor : '#1C8EAC',
+        backgroundColor : 'rgba(0, 0, 0, 0.65)',
         width: '100%' ,
         alignContent: 'center',
         alignItems: 'center',
