@@ -6,7 +6,8 @@ import { Footer } from "../Components/Footer";
 const menu = require('../assets/icons/menu.png');
 const searchkro = require('../assets/icons/searchkro.png');
 const card1 = require('../assets/images/music.jpg');
-const play  = require('../assets/images/play.png');
+const play = require('../assets/images/play.png');
+
 export function Main({ navigation }) {
   return (
     <View style={styles.container}>
@@ -19,8 +20,8 @@ export function Main({ navigation }) {
               <Image source={menu} style={styles.imgIcons} />
             </TouchableOpacity>
           </View>
-          <View style={[styles.headerItems, { flexDirection:'row',alignItems:'center',width: '80%', flexDirection: 'row',marginRight:11 }]}>
-            <TouchableOpacity style={{ marginRight:10 }}>
+          <View style={[styles.headerItems, { flexDirection: 'row', alignItems: 'center', width: '80%', flexDirection: 'row', marginRight: 11 }]}>
+            <TouchableOpacity style={{ marginRight: 10 }}>
               <Image source={searchkro} style={styles.imgIcons} />
             </TouchableOpacity>
             <TouchableOpacity>
@@ -43,43 +44,13 @@ export function Main({ navigation }) {
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
-
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
-                    
-                  </View>
-                
-                </TouchableOpacity>
-                
-              </View>
-            </View>
-
-            <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
-                    
-                  </View>
-                  
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    <View style={styles.musicInfoContainer}>
+                      <Text style={styles.musicName}>Faded</Text>
+                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    </View>
+                    <TouchableOpacity style={styles.playButton}>
+                      <Image source={play} style={{ width: 20, height: 20 }} />
+                    </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -92,8 +63,13 @@ export function Main({ navigation }) {
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    <View style={styles.musicInfoContainer}>
+                      <Text style={styles.musicName}>Faded</Text>
+                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    </View>
+                    <TouchableOpacity style={styles.playButton}>
+                      <Image source={play} style={{ width: 20, height: 20 }} />
+                    </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -106,8 +82,13 @@ export function Main({ navigation }) {
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    <View style={styles.musicInfoContainer}>
+                      <Text style={styles.musicName}>Faded</Text>
+                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    </View>
+                    <TouchableOpacity style={styles.playButton}>
+                      <Image source={play} style={{ width: 20, height: 20 }} />
+                    </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -120,8 +101,13 @@ export function Main({ navigation }) {
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    <View style={styles.musicInfoContainer}>
+                      <Text style={styles.musicName}>Faded</Text>
+                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    </View>
+                    <TouchableOpacity style={styles.playButton}>
+                      <Image source={play} style={{ width: 20, height: 20 }} />
+                    </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -134,56 +120,19 @@ export function Main({ navigation }) {
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <Text style={styles.musicName}>Faded</Text>
-                    <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    <View style={styles.musicInfoContainer}>
+                      <Text style={styles.musicName}>Faded</Text>
+                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                    </View>
+                    <TouchableOpacity style={styles.playButton}>
+                      <Image source={play} style={{ width: 20, height: 20 }} />
+                    </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
               </View>
             </View>
 
-
+            {/* Rest of the cards */}
           </View>
         </ScrollView>
         {/* Trending cards end */}
@@ -242,7 +191,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   card: {
-    width: 250,
+    width:240,
     borderRadius: 45,
     height: 185,
     resizeMode: 'contain',
@@ -286,5 +235,27 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 10,
     borderRadius: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  musicInfoContainer: {
+    flex: 1,
+    marginLeft: 10,
+  },
+  musicName: {
+    color: '#FFFEFE',
+    fontWeight: '900',
+    fontSize: 16,
+  },
+  musicDesc: {
+    color: '#FFFEFE',
+    fontWeight: '100',
+    fontSize: 12,
+  },
+  playButton: {
+    marginLeft: 10,
   },
 });
+
+export default Main;
