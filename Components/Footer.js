@@ -33,8 +33,8 @@ export function Footer({navigation}){
 const styles = StyleSheet.create({
     container: {
        
-        backgroundColor : 'rgba(200, 200, 200, 0.3)',
-        height: 50,
+        backgroundColor : 'rgba(200, 200, 200, 0.1)',
+        height: 52,
         width: '91%',
        /* margin: 10, */ 
         position: 'absolute',
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     iconStyle: {
-        height: 20,
+        height: 30,
         resizeMode:'contain',
         width: 30,
         tintColor: '#fff',

@@ -3,9 +3,13 @@ import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from "rea
 import { StatusBar } from "expo-status-bar";
 import { Footer } from "../Components/Footer";
 
+const musicIcon=require('../assets/icons/musicbox.png');
 const menu = require('../assets/icons/menu.png');
 const searchkro = require('../assets/icons/searchkro.png');
 const card1 = require('../assets/images/music.jpg');
+const card2 = require('../assets/images/music2.jpg');
+const card3 = require('../assets/images/music3.jpg');
+const card4 = require('../assets/images/music4.jpg');
 const play = require('../assets/images/play.png');
 
 export function Main({ navigation }) {
@@ -25,28 +29,29 @@ export function Main({ navigation }) {
               <Image source={searchkro} style={styles.imgIcons} />
             </TouchableOpacity>
             <TouchableOpacity>
-              <Text style={styles.searchtext}>Search</Text>
+              <Text style={styles.searchtext}>𝚂𝚎𝚊𝚛𝚌𝚑</Text>
             </TouchableOpacity>
           </View>
         </View>
         {/* search header end */}
 
-        <Text style={styles.mainHeading}> Trending Right Now</Text>
-        <View style={{ marginBottom: 10 }}></View>
+        <Text style={styles.mainHeading}> TᖇENᗪING ᖇIGᕼT NOᗯ</Text>
+        <View style={{ marginBottom: 12 }}></View>
         {/* Trending cards start */}
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View style={styles.cardContainer}>
             <View style={styles.card}>
               <Image source={card1} style={styles.cardImg} />
               <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
+                <Text style={styles.dotFont}>••• </Text>
               </TouchableOpacity>
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
                     <View style={styles.musicInfoContainer}>
                       <Text style={styles.musicName}>Faded</Text>
-                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                      <Text style={styles.musicDesc}>
+                      <Image source={musicIcon} style={ styles.musicbox} /> song by Alan Walker</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
                       <Image source={play} style={{ width: 20, height: 20 }} />
@@ -56,76 +61,61 @@ export function Main({ navigation }) {
               </View>
             </View>
             <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
+              <Image source={card2} style={styles.cardImg} />
               <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
+                <Text style={styles.dotFont}>••• </Text>
               </TouchableOpacity>
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
                     <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Faded</Text>
-                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                      <Text style={styles.musicName}>Naina Miley</Text>
+                      <Text style={styles.musicDesc}>
+                      <Image source={musicIcon} style={ styles.musicbox} />  Robot</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 20, height: 20 }} />
+                      <Image source={play} style={{ width: 22, height: 22 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
               </View>
             </View>
             <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
+              <Image source={card3} style={styles.cardImg} />
               <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
+                <Text style={styles.dotFont}>••• </Text>
               </TouchableOpacity>
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
                     <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Faded</Text>
-                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                      <Text style={styles.musicName}>Tu hi re</Text>
+                      <Text style={styles.musicDesc}>
+                      <Image source={musicIcon} style={ styles.musicbox} />  2.0</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 20, height: 20 }} />
+                      <Image source={play} style={{ width: 22, height: 22 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
               </View>
             </View>
+
             <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
+              <Image source={card4} style={styles.cardImg} />
               <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
+                <Text style={styles.dotFont}>••• </Text>
               </TouchableOpacity>
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
                     <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Faded</Text>
-                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
+                      <Text style={styles.musicName}>Zoom Zoom Roboda</Text>
+                      <Text style={styles.musicDesc}>
+                      <Image source={musicIcon} style={ styles.musicbox} />  Robot</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 20, height: 20 }} />
-                    </TouchableOpacity>
-                  </View>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>...</Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Faded</Text>
-                      <Text style={styles.musicDesc}>🎵 song by Alan Walker</Text>
-                    </View>
-                    <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 20, height: 20 }} />
+                      <Image source={play} style={{ width: 22, height: 22 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
@@ -147,7 +137,7 @@ export function Main({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.65)',
+    backgroundColor: 'rgb(52,34,73)',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -182,9 +172,9 @@ const styles = StyleSheet.create({
     
   },
   mainHeading: {
-    fontSize: 22,
-    color: 'rgba(196, 196, 196, 0.55)',
-    fontWeight: '700',
+    fontSize: 25,
+    color: 'rgba(196, 196, 196, 0.8)',
+    fontWeight: '800',
   },
   cardContainer: {
     flexDirection: 'row',
@@ -230,7 +220,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   playboxItem: {
-    backgroundColor: 'rgba(46, 31, 121, 0.55)',
+    backgroundColor: 'rgba(46, 31, 121, 0.085)',
     height: 55,
     width: '100%',
     padding: 10,
@@ -244,18 +234,19 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   musicName: {
-    color: 'rgba(255, 254, 254, 0.6)',
+    color: 'rgba(255, 254, 254, 0.9)',
     fontWeight: '900',
     fontSize: 16,
   },
   musicDesc: {
     color: 'rgba(255, 254, 254, 0.55)',
-    fontWeight: '100',
+    fontWeight: '900',
     fontSize: 12,
   },
   playButton: {
     marginLeft: 10,
   },
+
 });
 
 export default Main;
