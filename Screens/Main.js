@@ -166,24 +166,24 @@ const styles = StyleSheet.create({
   imgIcons: {
     height: 15,
     width: 15,
-    tintColor: '#fff',
+    tintColor: 'rgba(255, 255, 255, 0.55)',
   },
   headerItems: {
     flexDirection: 'row',
-    padding:11,
+    padding:12,
     alignItems: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     borderRadius: 10,
   },
   searchtext: {
     fontSize: 16,
-    color: '#ffff',
+    color: 'rgba(255, 255, 255, 0.55)',
     opacity: 0.45,
     
   },
   mainHeading: {
     fontSize: 22,
-    color: '#c4c4c4',
+    color: 'rgba(196, 196, 196, 0.55)',
     fontWeight: '700',
   },
   cardContainer: {
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
     right: 10,
   },
   dotFont: {
-    color: '#fff',
+    color: 'rgba(255, 255, 255, 0.55)',
     fontSize: 29,
     fontWeight: '600',
   },
@@ -220,17 +220,17 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   musicName: {
-    color: '#FFFEFE',
+    color: 'rgba(255, 254, 254, 0.55)',
     fontWeight: '900',
     fontSize: 16,
   },
   musicDesc: {
-    color: '#FFFEFE',
+    color: 'rgba(255, 254, 254, 0.55)',
     fontWeight: '100',
     fontSize: 12,
   },
   playboxItem: {
-    backgroundColor: '#2E1F79',
+    backgroundColor: 'rgba(46, 31, 121, 0.55)',
     height: 55,
     width: '100%',
     padding: 10,
@@ -244,12 +244,12 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   musicName: {
-    color: '#FFFEFE',
+    color: 'rgba(255, 254, 254, 0.6)',
     fontWeight: '900',
     fontSize: 16,
   },
   musicDesc: {
-    color: '#FFFEFE',
+    color: 'rgba(255, 254, 254, 0.55)',
     fontWeight: '100',
     fontSize: 12,
   },
