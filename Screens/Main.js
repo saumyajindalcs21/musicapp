@@ -242,6 +242,7 @@ export function Main() {
   </TouchableOpacity>
 </View>
 
+
         </ScrollView>
       </View>
       {/* Sub container end */}

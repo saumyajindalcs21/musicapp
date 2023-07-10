@@ -23,13 +23,13 @@ export function Music({ navigation }) {
       <Image source={require("../assets/music-image.jpg")} style={styles.musicImage} />
       <View style={styles.controlsContainer}>
         <TouchableOpacity onPress={handleBackward}>
-          <Feather name="skip-back" size={30} color="white" style={styles.controlButton} />
+          <Feather name="skip-back" size={50} color="white" style={styles.controlButton} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.playButton} onPress={handlePlayPause}>
-          <Feather name={isPlaying ? "pause" : "play"} size={30} color="white" />
+          <Feather name={isPlaying ? "pause" : "play"} size={40} color="white" />
         </TouchableOpacity>
         <TouchableOpacity onPress={handleForward}>
-          <Feather name="skip-forward" size={30} color="white" style={styles.controlButton} />
+          <Feather name="skip-forward" size={50} color="white" style={styles.controlButton} />
         </TouchableOpacity>
       </View>
       <Footer navigation={navigation} />
@@ -40,14 +40,15 @@ export function Music({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(180, 150, 200, 0.8)',
+    backgroundColor: '#131211',
     alignItems: 'center',
+    alignContent: 'center',
     justifyContent: 'center',
   },
   musicImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 300,
+    height: 300,
+    borderRadius: 50,
     marginBottom: 30,
   },
   controlsContainer: {
@@ -58,8 +59,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   playButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
-    padding: 20,
+    backgroundColor: '#444444',
+    padding: 30,
     borderRadius: 50,
   },
 });
