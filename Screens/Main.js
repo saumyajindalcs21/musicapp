@@ -55,7 +55,7 @@ export function Main({ navigation }) {
                       <Image source={musicIcon} style={ styles.musicbox} /> song by Alan Walker</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 20, height: 20 }} />
+                      <Image source={play} style={{ width: 42, height: 42 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
@@ -75,7 +75,7 @@ export function Main({ navigation }) {
                       <Image source={musicIcon} style={ styles.musicbox} />  Robot</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 22, height: 22 }} />
+                      <Image source={play} style={{ width: 42, height: 42 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
@@ -95,7 +95,7 @@ export function Main({ navigation }) {
                       <Image source={musicIcon} style={ styles.musicbox} />  2.0</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 22, height: 22 }} />
+                      <Image source={play} style={{ width: 42, height: 42 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
@@ -116,7 +116,7 @@ export function Main({ navigation }) {
                       <Image source={musicIcon} style={ styles.musicbox} />  Robot</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 12, height: 12 }} />
+                      <Image source={play} style={{ width: 42, height: 42 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
