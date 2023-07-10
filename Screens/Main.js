@@ -11,7 +11,8 @@ const card2 = require('../assets/images/music2.jpg');
 const card3 = require('../assets/images/music3.jpg');
 const card4 = require('../assets/images/music4.jpg');
 const play = require('../assets/images/play.png');
-
+const user = require('../assets/icons/user.png');
+const like = require('../assets/icons/like.png');
 export function Main({ navigation }) {
   return (
     <View style={styles.container}>
@@ -38,7 +39,7 @@ export function Main({ navigation }) {
         <Text style={styles.mainHeading}> TᖇENᗪING ᖇIGᕼT NOᗯ</Text>
         <View style={{ marginBottom: 12 }}></View>
         {/* Trending cards start */}
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{flexDirection: 'row'}}>   
           <View style={styles.cardContainer}>
             <View style={styles.card}>
               <Image source={card1} style={styles.cardImg} />
@@ -110,12 +111,12 @@ export function Main({ navigation }) {
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
                     <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Zoom Zoom Roboda</Text>
+                      <Text style={styles.musicName}>Boom Boom Roboda</Text>
                       <Text style={styles.musicDesc}>
                       <Image source={musicIcon} style={ styles.musicbox} />  Robot</Text>
                     </View>
                     <TouchableOpacity style={styles.playButton}>
-                      <Image source={play} style={{ width: 22, height: 22 }} />
+                      <Image source={play} style={{ width: 12, height: 12 }} />
                     </TouchableOpacity>
                   </View>
                 </TouchableOpacity>
@@ -124,11 +125,111 @@ export function Main({ navigation }) {
 
             {/* Rest of the cards */}
           </View>
+           </ScrollView>   
+         
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{flexDirection: 'row', gap: 15,position: 'absolute', zIndex:999, marginTop:0}}>
+          <TouchableOpacity style= {styles.textcard}>
+            <Text style={styles.musicDesc}>Devotional Songs</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style= {styles.textcard}>
+            <Text style={styles.musicDesc}>Rock</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style= {styles.textcard}>
+            <Text style={styles.musicDesc}>Pop</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style= {styles.textcard}>
+            <Text style={styles.musicDesc}>Classical</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style= {styles.textcard}>
+            <Text style={styles.musicDesc}>Telugu Hits</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style= {styles.textcard}>
+            <Text style={styles.musicDesc}>Bollywood Masala</Text>
+          </TouchableOpacity>
         </ScrollView>
         {/* Trending cards end */}
+
+        <ScrollView>
+          <View style= {styles.musicCard}>
+            <View style= {styles.musicCardCont}>
+            <Image source={card2} style={styles.musicImg}/>
+            <View style={styles.musicBoxDesc}>
+            <Text style= {styles.musicName}> I'm Good Blue</Text>
+             <View style={{
+              flexDirection:'row',
+              justifyContent: 'center',
+              alignContent:'center',
+              alignItems: 'center',
+              gap: 5,
+            }}>
+              <Image source={user} style={styles.musicSinger}/>
+              <Text style= {styles.musicDesc}>
+                David Gueeta
+              </Text>
+             </View>
+            </View>
+            </View>
+
+            <TouchableOpacity>
+              <Image source={like} style={styles.likeBtn} />
+            </TouchableOpacity>
+          </View>
+          <View style={{ marginBottom: 9 }}></View>
+          <View style= {styles.musicCard}>
+            <View style= {styles.musicCardCont}>
+            <Image source={card2} style={styles.musicImg}/>
+            <View style={styles.musicBoxDesc}>
+            <Text style= {styles.musicName}> I'm Good Blue</Text>
+             <View style={{
+              flexDirection:'row',
+              justifyContent: 'center',
+              alignContent:'center',
+              alignItems: 'center',
+              gap: 5,
+            }}>
+              <Image source={user} style={styles.musicSinger}/>
+              <Text style= {styles.musicDesc}>
+                David Gueeta
+              </Text>
+             </View>
+            </View>
+            </View>
+
+            <TouchableOpacity>
+              <Image source={like} style={styles.likeBtn} />
+            </TouchableOpacity>
+          </View>
+          <View style={{ marginBottom: 9 }}></View>
+          <View style= {styles.musicCard}>
+            <View style= {styles.musicCardCont}>
+            <Image source={card2} style={styles.musicImg}/>
+            <View style={styles.musicBoxDesc}>
+            <Text style= {styles.musicName}> I'm Good Blue</Text>
+             <View style={{
+              flexDirection:'row',
+              justifyContent: 'center',
+              alignContent:'center',
+              alignItems: 'center',
+              gap: 5,
+            }}>
+              <Image source={user} style={styles.musicSinger}/>
+              <Text style= {styles.musicDesc}>
+                David Gueeta
+              </Text>
+             </View>
+            </View>
+            </View>
+
+            <TouchableOpacity>
+              <Image source={like} style={styles.likeBtn} />
+            </TouchableOpacity>
+          </View>
+         
+          
+        </ScrollView>
       </View>
       {/* Sub container end */}
-
+      
       <Footer navigation={navigation} />
     </View>
   );
@@ -137,7 +238,7 @@ export function Main({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgb(52,34,73)',
+    backgroundColor: '#131211',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -246,6 +347,56 @@ const styles = StyleSheet.create({
   playButton: {
     marginLeft: 10,
   },
+  textcard:{
+    backgroundColor: '#4A2B99',
+    padding: 5,
+    borderRadius: 15,
+
+  },
+  musicCard:{
+    flexDirection:'row',
+    width: '100%',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    alignItems : 'center',
+    backgroundColor: '#00000000',
+    borderRadius: 20,
+    height:77,
+    padding: 15,
+
+  },
+  musicImg:{
+    height:75,
+    width: 75,
+    resizeMode:'contain',
+    alignSelf: 'center',
+    borderRadius:10,
+
+  },
+  likeBtn:{
+    height:35,
+    width: 35,
+    tintColor: '#fff',
+    resizeMode:'contain',
+  },
+  musicSinger:{
+    height:15,
+    width: 15,
+    resizeMode: 'contain',
+    tintColor:'#fff'
+  },
+  musicCardCont: {
+    flexDirection:'row',
+    alignContent: 'center',
+    alignItems: 'center',
+    gap:20,
+  },
+  musicBoxDesc:{
+    gap:10,
+    alignContent:'center',
+    alignItems:'center',
+
+  }
 
 });
 
