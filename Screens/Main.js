@@ -9,7 +9,7 @@ const musicIcon = require("../assets/icons/musicbox.png");
 const menu = require("../assets/icons/menu.png");
 const searchkro = require("../assets/icons/searchkro.png");
 const card1 = require("../assets/images/music.jpg");
-const card2 = require("../assets/images/music2.jpg");
+const card2 = require("../assets/images/card1.jpg");
 const card3 = require("../assets/images/music3.jpg");
 const card4 = require("../assets/images/music4.jpg");
 const play = require("../assets/images/play.png");
@@ -20,7 +20,7 @@ const filledLike = require("../assets/icons/filled-like.png");
 export function Main() {
   const [searchActive, setSearchActive] = useState(false);
   const navigation = useNavigation();
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState([false, false]); 
   const [isLiked, setIsLiked] = useState([false, false, false]);
 
   const handleLike = (index) => {
@@ -36,9 +36,14 @@ export function Main() {
     navigation.navigate("Search");
   };
 
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
+  const handlePlayPause = (index) => {
+    setIsPlaying((prevState) => {
+      const updatedPlaying = [...prevState];
+      updatedPlaying[index] = !updatedPlaying[index];
+      return updatedPlaying;
+    });
   };
+  
 
   return (
     <View style={styles.container}>
@@ -59,16 +64,17 @@ export function Main() {
           </View>
         </TouchableOpacity>
         {/* search header end */}
-
+        <ScrollView nestedScrollEnabled={true} showsVerticalScrollIndicator={false}>
         <Text style={styles.mainHeading}> TᖇENᗪING ᖇIGᕼT NOᗯ</Text>
         <View style={{ marginBottom: 12 }}></View>
         {/* Trending cards start */}
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexDirection: "row" }}>
+        {/*  */}
           <View style={styles.cardContainer}>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexDirection: "row" }}>
             <View style={styles.card}>
               <Image source={card1} style={styles.cardImg} />
               <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>••• </Text>
+                <Text style={styles.dotFont}>... </Text>
               </TouchableOpacity>
               <View style={styles.playbox}>
                 <TouchableOpacity>
@@ -76,82 +82,52 @@ export function Main() {
                     <View style={styles.musicInfoContainer}>
                       <Text style={styles.musicName}>Faded</Text>
                       <Text style={styles.musicDesc}>
-                        <Image source={musicIcon} style={styles.musicbox} /> song by Alan Walker
+                        <Image source={musicIcon} style={styles.musicbutton} /> song by Alan Walker
                       </Text>
                     </View>
-                    <TouchableOpacity style={styles.playButton} onPress={handlePlayPause}>
-                      <Feather
-                        name={isPlaying ? "pause-circle" : "play-circle"}
-                        size={36}
-                        color="white"
-                        onPress={handlePlayPause}
-                      />
-                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.playButton} onPress={() => handlePlayPause(0)}>
+  <Feather
+    name={isPlaying[0] ? "pause-circle" : "play-circle"}
+    size={36}
+    color="white"
+  />
+</TouchableOpacity>
+
                   </View>
                 </TouchableOpacity>
               </View>
             </View>
-            {/* Rest of the cards */}
-          </View>
-          <View style={{ marginRight: 12 }}></View>
-          <View style={styles.cardContainer}>
             <View style={styles.card}>
-              <Image source={card2} style={styles.cardImg} />
+              <Image source={card1} style={styles.cardImg} />
               <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>••• </Text>
+                <Text style={styles.dotFont}>... </Text>
               </TouchableOpacity>
               <View style={styles.playbox}>
                 <TouchableOpacity>
                   <View style={styles.playboxItem}>
                     <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Naina Miley</Text>
+                      <Text style={styles.musicName}>Faded</Text>
                       <Text style={styles.musicDesc}>
-                        <Image source={musicIcon} style={styles.musicbox} /> Robot
+                        <Image source={musicIcon} style={styles.musicbutton} /> song by Alan Walker
                       </Text>
                     </View>
-                    <TouchableOpacity style={styles.playButton} onPress={handlePlayPause}>
-                      <Feather
-                        name={isPlaying ? "pause-circle" : "play-circle"}
-                        size={36}
-                        color="white"
-                        onPress={handlePlayPause}
-                      />
-                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.playButton} onPress={() => handlePlayPause(1)}>
+  <Feather
+    name={isPlaying[1] ? "pause-circle" : "play-circle"}
+    size={36}
+    color="white"
+  />
+</TouchableOpacity>
+
                   </View>
                 </TouchableOpacity>
               </View>
             </View>
-            {/* Rest of the cards */}
+            </ScrollView>
           </View>
-        </ScrollView>
-        <View style={{ marginBottom:1}}></View>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={{ flexDirection: "row", gap: 15, position: "absolute", zIndex: 999, marginTop: 0 }}
-        >
-          <TouchableOpacity style={styles.textcard}>
-            <Text style={styles.musicDesc}>Devotional Songs</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.textcard}>
-            <Text style={styles.musicDesc}>Rock</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.textcard}>
-            <Text style={styles.musicDesc}>Pop</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.textcard}>
-            <Text style={styles.musicDesc}>Classical</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.textcard}>
-            <Text style={styles.musicDesc}>Telugu Hits</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.textcard}>
-            <Text style={styles.musicDesc}>Bollywood Masala</Text>
-          </TouchableOpacity>
-        </ScrollView>
-        {/* Trending cards end */}
-        <View style={{ marginBottom:2, position: "absolute" }}></View>
-        <ScrollView>
+          <View style={{ marginBottom: 27 }}></View>
+          <View>
+
           <View style={styles.musicCard}>
             <View style={styles.musicCardCont}>
               <Image source={card2} style={styles.musicImg} />
@@ -170,54 +146,22 @@ export function Main() {
 
           <View style={{ marginBottom: 9 }}></View>
 
-          <View style={styles.musicCard}>
-            <View style={styles.musicCardCont}>
-              <Image source={card2} style={styles.musicImg} />
-              <View style={styles.musicBoxDesc}>
-                <Text style={styles.musicName}> I'm Good Blue</Text>
-                <View style={styles.musicSingerContainer}>
-                  <Image source={user} style={styles.musicSinger} />
-                  <Text style={styles.musicDesc}>David Gueeta</Text>
-                </View>
-              </View>
-            </View>
-            <TouchableOpacity onPress={() => handleLike(1)}>
-              <Image source={isLiked[1] ? filledLike : like} style={styles.likeBtn} />
-            </TouchableOpacity>
-          </View>
-
-          <View style={{ marginBottom: 9 }}></View>
-
-          <View style={styles.musicCard}>
-            <View style={styles.musicCardCont}>
-              <Image source={card2} style={styles.musicImg} />
-              <View style={styles.musicBoxDesc}>
-                <Text style={styles.musicName}> I'm Good Blue</Text>
-                <View style={styles.musicSingerContainer}>
-                  <Image source={user} style={styles.musicSinger} />
-                  <Text style={styles.musicDesc}>David Gueeta</Text>
-                </View>
-              </View>
-            </View>
-            <TouchableOpacity onPress={() => handleLike(2)}>
-              <Image source={isLiked[2] ? filledLike : like} style={styles.likeBtn} />
-            </TouchableOpacity>
-          </View>
           
+          
+          </View>
         </ScrollView>
       </View>
-      {/* Sub container end */}
-
+      <View style={{ marginTop:49 }}></View>
       <Footer navigation={navigation} />
     </View>
   );
 }
-
+// #2C3E50
+// 
 const styles = StyleSheet.create({
-  // Styles for your components
   container: {
     flex: 1,
-    backgroundColor: "#131211",
+    backgroundColor: "#2C3E50",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -263,6 +207,15 @@ const styles = StyleSheet.create({
     width: 240,
     borderRadius: 45,
     height: 185,
+    resizeMode: "contain",
+    elevation: 20,
+    shadowColor:'#fffAA',
+    marginRight:15,
+  },
+  musicbutton:{
+    height: 5,
+    width: 5,
+    tintColor: "#fff",
     resizeMode: "contain",
   },
   cardImg: {
@@ -326,9 +279,9 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   textcard: {
-    backgroundColor: "#4A2B99",
+    backgroundColor: "#0048BAAA",
     padding: 5,
-    borderRadius: 15,
+    borderRadius:10,
   },
   musicCard: {
     flexDirection: "row",
@@ -338,16 +291,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#00000000",
     borderRadius: 20,
-    height: 77,
+    height: 57,
     padding: 15,
-    marginBottom: 9,
+    marginBottom: 19,
   },
   musicImg: {
-    height: 75,
-    width: 75,
+    height: 55,
+    width: 55,
     resizeMode: "contain",
     alignSelf: "center",
-    borderRadius: 10,
+    borderRadius: 100,
+    marginTop:5
   },
   likeBtn: {
     height: 35,
@@ -378,6 +332,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
   },
+
 });
 
 export default Main;

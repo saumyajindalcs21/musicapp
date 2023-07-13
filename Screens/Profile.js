@@ -7,7 +7,7 @@ export function Profile({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.profileContainer}>
-        <Image source={require("../assets/profile-img.jpg")} style={styles.profileImage} />
+        {/* <Image source={require("../assets/profile-img.jpg")} style={styles.profileImage} /> */}
         <Text style={styles.profileName}>Saumya Jindal</Text>
         <Text style={styles.profileInfo}>Singer, Songwriter, App Maker</Text>
         <View style={styles.socialContainer}>

@@ -38,12 +38,13 @@ export function Search({ navigation }) {
           ref={inputRef}
           style={styles.searchInput}
           placeholder="Enter song name"
+          autoFocus={true}
           value={searchText}
           onChangeText={setSearchText}
           onSubmitEditing={handleSearch}
         />
       </View>
-      <Footer navigation={navigation} />
+      <Footer navigation={navigation}/>
     </View>
   );
 }
@@ -80,4 +81,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     flex: 1, // Allow the input to expand and take remaining space
   },
+
 });
