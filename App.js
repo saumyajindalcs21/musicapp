@@ -5,7 +5,7 @@ import { Profile } from './Screens/Profile';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { Search } from './Screens/Search';
-import {Music} from './Screens/Music'
+import {Music} from './Screens/Music';
 const stack = createNativeStackNavigator();
 export default function App() {
   return (

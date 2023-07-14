@@ -52,7 +52,7 @@ export function Search({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#333333',
+    backgroundColor: '#2C3E50',
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 40,

@@ -33,7 +33,7 @@ export function Footer({navigation}){
 const styles = StyleSheet.create({
     container: {
        
-        backgroundColor : '#000000AA',
+        backgroundColor : '#FFF0F81A',
         height: 52,
         width: '90%',
        /* margin: 10, */ 

@@ -40,7 +40,7 @@ export function Music({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#131211',
+    backgroundColor: '#2C3E50',
     alignItems: 'center',
     alignContent: 'center',
     justifyContent: 'center',
