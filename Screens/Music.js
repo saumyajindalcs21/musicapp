@@ -8,20 +8,199 @@ import Song from '../Song';
 export function Music({ navigation }) {
   const songUrls = [
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/musicapp-6c355.appspot.com/o/songs%2FBoom%20Boom%20Robo%20Da.mp3?alt=media&token=032d8082-8859-40f3-ae57-b3cefcc6e8d4',
-      image: 'https://firebasestorage.googleapis.com/v0/b/musicapp-6c355.appspot.com/o/picture%20url%2Fzoomzoom.jpg?alt=media&token=04a890b0-bda0-4636-9907-edb6fdd6d294',
-      name: 'Boom Boom Roboda',
+      url: 'https://pwdown.info/11437/Pal%20Pal%20Dil%20Ke%20Paas%20-%20Kishore%20Kumar%20190Kbps%20(Original).mp3',
+      image: 'https://1.bp.blogspot.com/-Fp__dFltfFU/Xg15u8MnZSI/AAAAAAAAEB4/gClaAwP3PNgFgg7R3aEltNaCoy9HgQMfACLcBGAsYHQ/s640/maxresdefault.jpg',
+      name: 'Pal Pal Dil Ke Paas',
+      singername: 'Dharmendra Paaji'
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/musicapp-6c355.appspot.com/o/songs%2FEnnenno%20Lyrical%20Evaru%20Songs%20Adivi%20Sesh%20Regina%20Cassandra%20Naveen%20Chandra.mp3?alt=media&token=814c3e1a-4acd-4442-a47a-0736641f140e',
-      image: 'https://firebasestorage.googleapis.com/v0/b/musicapp-6c355.appspot.com/o/picture%20url%2Fennenno.jpg?alt=media&token=16320b0d-f167-4087-9f9b-992d50663e20',
-      name: 'Ennenno',
+      url: 'https://pwdown.info/110433/07.%20Mere%20Dholna.mp3',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQc72UlQORyB-jLXeaJlPZUCrMSedU4kwrw&usqp=CAU',
+      name: 'Mere Dholna',
+      singername: 'Shreya Goshal'
     },
     {
-      url: 'https://firebasestorage.googleapis.com/v0/b/musicapp-6c355.appspot.com/o/songs%2FSlow%20Version%20Bhulne%20Ke%20Bhul%20Karna%20Nahi%20-%20Kgf%202%20!%20Hindi.mp3?alt=media&token=3eddee5f-8b83-4d1d-b9d0-d11f7e38d688',
-      image: 'https://firebasestorage.googleapis.com/v0/b/musicapp-6c355.appspot.com/o/picture%20url%2Fbhuulne.jpg?alt=media&token=76eb8032-500a-4eba-9db0-fbb910d5e953',
-      name: 'Bhuulne ki bhool',
+      url: 'https://pwdown.info/14671/High%20Rated%20Gabru%20-%20Guru%20Randhawa.mp3',
+      image: 'https://www.pagalworld.tv/GpE34Kg9Gq/14671/118539-high-rated-gabru-guru-randhawa-mp3-song-300.jpg',
+      name: 'High Rated Gabru',
+      singername: 'Guru Randhawa',
     },
+    {
+      url: 'https://pwdown.info/110745/06.%20Tum%20Dil%20Ki%20Dhadkan%20Mein.mp3',
+      image: 'https://www.pagalworld.tv/GpE34Kg9Gq/110745/thumb-dhadkan-300.jpg',
+      name: 'Tum Dil Ki Dhadkan Mein',
+      singername: 'Dhadkan',
+    },
+  
+    {
+      url: 'https://pwdown.info/113198/09.%20Saat%20Samundar%20Paar.mp3',
+      image: 'https://www.pagalworld.tv/GpE34Kg9Gq/113198/thumb-vishwatma-300.jpg',
+      name: 'Saat Samundar Paar',
+      singername: 'Vishwatma',
+    },
+    {
+      url: 'https://pwdown.info/112876/05.%20Tu%20Pagal%20Prem%20Awara.mp3',
+      image: 'https://www.pagalworld.tv/GpE34Kg9Gq/112876/thumb-shola-aur-shabnam-300.jpg',
+      name: 'Tu Pagal Prem Awara',
+      singername: 'Shola Aur Shabnam',
+    },
+    {
+      url: 'https://pwdown.info/111986/05.%20Dil%20Deewana%20-%20Female.mp3',
+      image: 'https://images.news18.com/ibnkhabar/uploads/2021/12/Untitled-design-9-22.jpg?im=Resize,width=540,aspect=fit,type=normal',
+      name: 'Dil Deewana',
+      singername: 'maine pyaar kiya',
+    },
+    {
+      url: 'https://pwdown.info/7211/08%20Chingari%20Koi%20Bhadke.mp3',
+      image: 'https://i.ibb.co/Xx3GdsC/rajesh-khanna-songs.webp',
+      name: 'Chingari Koi Bhadke',
+      singername: 'Rajesh Khanna',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+    {
+      url: ' ',
+      image: ' ',
+      name: ' ',
+      singername: ' ',
+    },
+
   ];
 
   return (

@@ -15,12 +15,13 @@ export function Profile({ navigation }) {
 
     setTimeout(() => {
       setMessage("");
-    }, 5000);
+    }, 1500);
   };
 
   return (
     <View style={styles.container}>
         <View style={{ marginBottom: 27 }}></View>
+        <View style= {styles.upperdata}>
       <Text style={styles.title}>Data from FireStore Database</Text>
       <View style={styles.content}>
         <TextInput
@@ -43,19 +44,25 @@ export function Profile({ navigation }) {
 
         {message ? <Text style={styles.message}>{message}</Text> : null}
       </View>
-
+      </View>
       <Footer navigation={navigation}/>
-    </View>
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#2C3E50",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  upperdata:{
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 50,
-    paddingHorizontal: 20,
+    width:'88%',
     backgroundColor: '#2C3E50',
   },
   title: {

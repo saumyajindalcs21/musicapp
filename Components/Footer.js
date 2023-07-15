@@ -2,10 +2,10 @@ import React from "react";
 import { View,Image,StyleSheet,TouchableOpacity } from "react-native";
 
 
-const homeIcon=require('../assets/icons/home.png')
-const searchIcon=require('../assets/icons/search.png')
-const musicIcon=require('../assets/icons/music.png')
-const profileIcon=require('../assets/icons/user.png')
+const homeIcon=require("../assets/icons/home.png");
+const searchIcon=require("../assets/icons/search.png");
+const musicIcon=require("../assets/icons/music.png");
+const profileIcon=require("../assets/icons/user.png");
 
 
 export function Footer({navigation}){
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     },
     innerBox: {
        
-    padding: 20,  
+    padding: 10,  
     width: '100%',
         flexDirection: 'row',
         alignContent: 'center',

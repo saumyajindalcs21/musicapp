@@ -33,7 +33,7 @@ export function Search({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.searchContainer}>
-        <Feather name="search" size={40} color="black" style={styles.searchIcon} />
+        <Feather name="search" size={43} color="blue" style={styles.searchIcon} />
         <TextInput
           ref={inputRef}
           style={styles.searchInput}

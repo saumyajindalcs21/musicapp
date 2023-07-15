@@ -8,9 +8,9 @@ import { Feather } from "@expo/vector-icons";
 const musicIcon = require("../assets/icons/musicbox.png");
 const menu = require("../assets/icons/menu.png");
 const searchkro = require("../assets/icons/searchkro.png");
-const card1 = require("../assets/images/music.jpg");
-const card2 = require("../assets/images/card1.jpg");
-const play = require("../assets/images/play.png");
+const card1 ={uri:'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D&w=1000&q=80'};
+const card2 = {uri:'https://daily.jstor.org/wp-content/uploads/2023/01/good_times_with_bad_music_1050x700.jpg'};
+// const play = require("../assets/images/play.png");
 const user = require("../assets/icons/user.png");
 const like = require("../assets/icons/like.png");
 const filledLike = require("../assets/icons/filled-like.png");
@@ -28,7 +28,6 @@ export function Main() {
       return updatedLiked;
     });
   };
-
   const handleSearch = () => {
     setSearchActive(true);
     navigation.navigate("Search");
@@ -70,7 +69,7 @@ export function Main() {
           <View style={styles.cardContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexDirection: "row" }}>
             <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
+              <Image source={ card1 } style={styles.cardImg} />
               <TouchableOpacity style={styles.dotIcon}>
                 <Text style={styles.dotFont}>... </Text>
               </TouchableOpacity>
