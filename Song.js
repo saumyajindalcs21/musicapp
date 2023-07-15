@@ -116,10 +116,10 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   songName: {
-    fontSize: 22,
+    fontSize: 32,
     color:'#fff',
     marginBottom: 20,
-    textDecorationLine: 'underline',
+    textDecorationLine: 'none',
   },
   controls: {
     width: 250,

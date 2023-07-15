@@ -136,6 +136,7 @@ export function Main() {
                   <Text style={styles.musicDesc}>David Gueeta</Text>
                 </View>
               </View>
+              
             </View>
             <TouchableOpacity onPress={() => handleLike(0)}>
               <Image source={isLiked[0] ? filledLike : like} style={styles.likeBtn} />
