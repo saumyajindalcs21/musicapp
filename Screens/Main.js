@@ -4,13 +4,13 @@ import { StatusBar } from "expo-status-bar";
 import { Footer } from "../Components/Footer";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
+import MusicScreen from "./MusicScreen";
 
 const musicIcon = require("../assets/icons/musicbox.png");
 const menu = require("../assets/icons/menu.png");
 const searchkro = require("../assets/icons/searchkro.png");
-const card1 ={uri:'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D&w=1000&q=80'};
-const card2 = {uri:'https://daily.jstor.org/wp-content/uploads/2023/01/good_times_with_bad_music_1050x700.jpg'};
-// const play = require("../assets/images/play.png");
+const card1 = { uri: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D&w=1000&q=80' };
+const card2 = { uri: 'https://1.bp.blogspot.com/-Fp__dFltfFU/Xg15u8MnZSI/AAAAAAAAEB4/gClaAwP3PNgFgg7R3aEltNaCoy9HgQMfACLcBGAsYHQ/s640/maxresdefault.jpg' };
 const user = require("../assets/icons/user.png");
 const like = require("../assets/icons/like.png");
 const filledLike = require("../assets/icons/filled-like.png");
@@ -18,8 +18,13 @@ const filledLike = require("../assets/icons/filled-like.png");
 export function Main() {
   const [searchActive, setSearchActive] = useState(false);
   const navigation = useNavigation();
-  const [isPlaying, setIsPlaying] = useState([false, false]); 
+  const [isPlaying, setIsPlaying] = useState([false, false]);
   const [isLiked, setIsLiked] = useState([false, false, false]);
+
+  const handleCardPress = () => {
+    // Navigate to the music screen
+    navigation.navigate('MusicScreen');
+  };
 
   const handleLike = (index) => {
     setIsLiked((prevLiked) => {
@@ -28,6 +33,7 @@ export function Main() {
       return updatedLiked;
     });
   };
+
   const handleSearch = () => {
     setSearchActive(true);
     navigation.navigate("Search");
@@ -40,7 +46,6 @@ export function Main() {
       return updatedPlaying;
     });
   };
-  
 
   return (
     <View style={styles.container}>
@@ -62,100 +67,96 @@ export function Main() {
         </TouchableOpacity>
         {/* search header end */}
         <ScrollView nestedScrollEnabled={true} showsVerticalScrollIndicator={false}>
-        <Text style={styles.mainHeading}> TᖇENᗪING ᖇIGᕼT NOᗯ</Text>
-        <View style={{ marginBottom: 12 }}></View>
-        {/* Trending cards start */}
-        {/*  */}
+          <Text style={styles.mainHeading}> TᖇENᗪING ᖇIGᕼT NOᗯ</Text>
+          <View style={{ marginBottom: 12 }}></View>
+          {/* Trending cards start */}
+          {/*  */}
           <View style={styles.cardContainer}>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexDirection: "row" }}>
-            <View style={styles.card}>
-              <Image source={ card1 } style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>... </Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Faded</Text>
-                      <Text style={styles.musicDesc}>
-                        <Image source={musicIcon} style={styles.musicbutton} /> song by Alan Walker
-                      </Text>
-                    </View>
-                    <TouchableOpacity style={styles.playButton} onPress={() => handlePlayPause(0)}>
-  <Feather
-    name={isPlaying[0] ? "pause-circle" : "play-circle"}
-    size={36}
-    color="white"
-  />
-</TouchableOpacity>
-
-                  </View>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ flexDirection: "row" }}>
+              <View style={styles.card}>
+                <Image source={card1} style={styles.cardImg} />
+                <TouchableOpacity style={styles.dotIcon}>
+                  <Text style={styles.dotFont}>... </Text>
                 </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.card}>
-              <Image source={card1} style={styles.cardImg} />
-              <TouchableOpacity style={styles.dotIcon}>
-                <Text style={styles.dotFont}>... </Text>
-              </TouchableOpacity>
-              <View style={styles.playbox}>
-                <TouchableOpacity>
-                  <View style={styles.playboxItem}>
-                    <View style={styles.musicInfoContainer}>
-                      <Text style={styles.musicName}>Faded</Text>
-                      <Text style={styles.musicDesc}>
-                        <Image source={musicIcon} style={styles.musicbutton} /> song by Alan Walker
-                      </Text>
+                <View style={styles.playbox}>
+                  <TouchableOpacity>
+                    <View style={styles.playboxItem}>
+                      <View style={styles.musicInfoContainer}>
+                        <Text style={styles.musicName}>Faded</Text>
+                        <Text style={styles.musicDesc}>
+                          <Image source={musicIcon} style={styles.musicbutton} /> song by Alan Walker
+                        </Text>
+                      </View>
+                      <TouchableOpacity style={styles.playButton} onPress={() => handlePlayPause(0)}>
+                        <Feather
+                          name={isPlaying[0] ? "pause-circle" : "play-circle"}
+                          size={36}
+                          color="white"
+                        />
+                      </TouchableOpacity>
                     </View>
-                    <TouchableOpacity style={styles.playButton} onPress={() => handlePlayPause(1)}>
-  <Feather
-    name={isPlaying[1] ? "pause-circle" : "play-circle"}
-    size={36}
-    color="white"
-  />
-</TouchableOpacity>
-
-                  </View>
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                </View>
               </View>
-            </View>
+              <View style={styles.card}>
+                <Image source={card1} style={styles.cardImg} />
+                <TouchableOpacity style={styles.dotIcon}>
+                  <Text style={styles.dotFont}>... </Text>
+                </TouchableOpacity>
+                <View style={styles.playbox}>
+                  <TouchableOpacity>
+                    <View style={styles.playboxItem}>
+                      <View style={styles.musicInfoContainer}>
+                        <Text style={styles.musicName}>Faded</Text>
+                        <Text style={styles.musicDesc}>
+                          <Image source={musicIcon} style={styles.musicbutton} /> song by Alan Walker
+                        </Text>
+                      </View>
+                      <TouchableOpacity style={styles.playButton} onPress={() => handlePlayPause(1)}>
+                        <Feather
+                          name={isPlaying[1] ? "pause-circle" : "play-circle"}
+                          size={36}
+                          color="white"
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
             </ScrollView>
           </View>
           <View style={{ marginBottom: 27 }}></View>
           <View>
-
-          <View style={styles.musicCard}>
-            <View style={styles.musicCardCont}>
-              <Image source={card2} style={styles.musicImg} />
-              <View style={styles.musicBoxDesc}>
-                <Text style={styles.musicName}> I'm Good Blue</Text>
-                <View style={styles.musicSingerContainer}>
-                  <Image source={user} style={styles.musicSinger} />
-                  <Text style={styles.musicDesc}>David Gueeta</Text>
+            <TouchableOpacity onPress={handleCardPress}>
+              <View style={styles.musicCard}>
+                <View style={styles.musicCardCont}>
+                  <Image source={card2} style={styles.musicImg} />
+                  <View style={styles.musicBoxDesc}>
+                    <Text style={styles.musicName}>Pal Pal dil ke pass</Text>
+                    <View style={styles.musicSingerContainer}>
+                      <Image source={user} style={styles.musicSinger} />
+                      <Text style={styles.musicDesc}>Kishor kumar</Text>
+                    </View>
+                  </View>
                 </View>
+                <TouchableOpacity onPress={() => handleLike(0)}>
+                  <Image
+                    source={isLiked[0] ? filledLike : like}
+                    style={styles.likeBtn}
+                  />
+                </TouchableOpacity>
               </View>
-              
-            </View>
-            <TouchableOpacity onPress={() => handleLike(0)}>
-              <Image source={isLiked[0] ? filledLike : like} style={styles.likeBtn} />
             </TouchableOpacity>
-          </View>
-
-          <View style={{ marginBottom: 9 }}></View>
-
-          
-          
+            <View style={{ marginBottom: 9 }}></View>
           </View>
         </ScrollView>
       </View>
-      <View style={{ marginTop:49 }}></View>
+      <View style={{ marginTop: 49 }}></View>
       <Footer navigation={navigation} />
     </View>
   );
 }
-// #2C3E50
-// 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -207,10 +208,10 @@ const styles = StyleSheet.create({
     height: 185,
     resizeMode: "contain",
     elevation: 20,
-    shadowColor:'#fffAA',
-    marginRight:15,
+    shadowColor: '#fffAA',
+    marginRight: 15,
   },
-  musicbutton:{
+  musicbutton: {
     height: 5,
     width: 5,
     tintColor: "#fff",
@@ -279,7 +280,7 @@ const styles = StyleSheet.create({
   textcard: {
     backgroundColor: "#0048BAAA",
     padding: 5,
-    borderRadius:10,
+    borderRadius: 10,
   },
   musicCard: {
     flexDirection: "row",
@@ -299,7 +300,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     alignSelf: "center",
     borderRadius: 100,
-    marginTop:5
+    marginTop: 5
   },
   likeBtn: {
     height: 35,
@@ -330,7 +331,6 @@ const styles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
   },
-
 });
 
 export default Main;
