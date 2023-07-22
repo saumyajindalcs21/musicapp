@@ -7,12 +7,7 @@ import Song from '../Song';
 
 export function Music({ navigation }) {
   const songUrls = [
-    {
-      url: 'https://pwdown.info/11437/Pal%20Pal%20Dil%20Ke%20Paas%20-%20Kishore%20Kumar%20190Kbps%20(Original).mp3',
-      image: 'https://1.bp.blogspot.com/-Fp__dFltfFU/Xg15u8MnZSI/AAAAAAAAEB4/gClaAwP3PNgFgg7R3aEltNaCoy9HgQMfACLcBGAsYHQ/s640/maxresdefault.jpg',
-      name: 'Pal Pal Dil Ke Paas',
-      singername: 'Dharmendra Paaji'
-    },
+   
     {
       url: 'https://pwdown.info/110433/07.%20Mere%20Dholna.mp3',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQc72UlQORyB-jLXeaJlPZUCrMSedU4kwrw&usqp=CAU',
@@ -59,147 +54,10 @@ export function Music({ navigation }) {
     {
       url: ' ',
       image: ' ',
-      name: ' ',
+      name: 'No more Songs',
       singername: ' ',
     },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
-    {
-      url: ' ',
-      image: ' ',
-      name: ' ',
-      singername: ' ',
-    },
+
 
   ];
 

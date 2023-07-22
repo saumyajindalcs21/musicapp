@@ -4,8 +4,11 @@ import { Audio } from 'expo-av';
 import { Feather } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
 
-const Song = ({ songUrls }) => {
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+const MusicScreen6 = () => {
+  const songUrl = 'https://pwdown.info/113622/The%20Monster%20Song%20-%20KGF%202.mp3'; // Replace with your song URL
+  const songName = 'Monster Song';
+  const singername = 'Adithi Sagar, Ravi Basrur';
+  const songimage = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/113622/149377-the-monster-song-kgf-2-mp3-song-300.jpg' };
   const [isPlaying, setIsPlaying] = useState(false);
   const [soundObject, setSoundObject] = useState(null);
   const [position, setPosition] = useState(0);
@@ -24,16 +27,16 @@ const Song = ({ songUrls }) => {
   }, []);
 
   useEffect(() => {
-    loadCurrentSong();
-  }, [currentSongIndex]);
+    loadSong();
+  }, []);
 
   useEffect(() => {
     if (isLoaded && position !== 0 && position === duration) {
-      playNextSong();
+      pauseSong();
     }
   }, [position, duration, isLoaded]);
 
-  const loadCurrentSong = async () => {
+  const loadSong = async () => {
     try {
       if (soundObject) {
         await soundObject.pauseAsync();
@@ -42,8 +45,8 @@ const Song = ({ songUrls }) => {
       }
 
       const { sound, status } = await Audio.Sound.createAsync(
-        { uri: songUrls[currentSongIndex].url },
-        { shouldPlay: isPlaying },
+        { uri: songUrl },
+        { shouldPlay: false },
         onPlaybackStatusUpdate
       );
       setSoundObject(sound);
@@ -58,8 +61,21 @@ const Song = ({ songUrls }) => {
   const onPlaybackStatusUpdate = (status) => {
     setPosition(status.positionMillis);
   };
-
   const playSong = async () => {
+    try {
+      if (soundObject) {
+        await soundObject.playAsync();
+      } else {
+        loadCurrentSong();
+      }
+
+      setIsPlaying(true);
+    } catch (error) {
+      console.log('Error playing song:', error);
+    }
+  };
+
+  const togglePlayPause = async () => {
     try {
       if (soundObject) {
         await soundObject.playAsync();
@@ -79,19 +95,6 @@ const Song = ({ songUrls }) => {
       setIsPlaying(false);
     }
   };
-
-  const playPreviousSong = () => {
-    if (currentSongIndex > 0) {
-      setCurrentSongIndex(currentSongIndex - 1);
-    }
-  };
-
-  const playNextSong = () => {
-    if (currentSongIndex < songUrls.length - 1) {
-      setCurrentSongIndex(currentSongIndex + 1);
-    }
-  };
-
   const onSliderValueChange = (value) => {
     setPosition(value);
     if (soundObject) {
@@ -117,10 +120,10 @@ const Song = ({ songUrls }) => {
 
   return (
     <View style={styles.container}>
-      <Image source={{ uri: songUrls[currentSongIndex].image }} style={styles.songImage} />
-      <Text style={styles.songName}>{songUrls[currentSongIndex].name}</Text>
-      <Text style={styles.singername}>{songUrls[currentSongIndex].singername}</Text>
-      <View style={{ marginBottom:14 }}></View>
+      <Image source={songimage} style={styles.songImage} />
+      <Text style={styles.songName}>{songName}</Text>
+      <Text style={styles.singername}>{singername}</Text>
+      <View style={{ marginBottom:23 }}></View>
       <Text style={styles.timestampText}>{formatTime(position)}</Text>
       <Text style={styles.durationText}>{formatTime(duration)}</Text>
       <View style={styles.sliderContainer}>
@@ -140,9 +143,7 @@ const Song = ({ songUrls }) => {
       <View style={{ marginBottom:27 }}></View>
 
       <View style={styles.controls}>
-        <TouchableOpacity style={styles.button} onPress={playPreviousSong}>
-          <Feather name="skip-back" size={26} color="white" />
-        </TouchableOpacity>
+        
         {isPlaying ? (
           <TouchableOpacity style={styles.button} onPress={pauseSong}>
             <Feather name="pause" size={29} color="white" />
@@ -152,11 +153,8 @@ const Song = ({ songUrls }) => {
             <Feather name="play" size={29} color="white" />
           </TouchableOpacity>
         )}
-        <TouchableOpacity style={styles.button} onPress={playNextSong}>
-          <Feather name="skip-forward" size={26} color="white" />
-        </TouchableOpacity>
+        
       </View>
-      
     </View>
   );
 };
@@ -166,6 +164,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor:'#2C3E50',
   },
   songImage: {
     width: 200,
@@ -217,10 +216,10 @@ const styles = StyleSheet.create({
   },
   durationText: {
     fontSize: 12,
-    color: 'yellow',
-    marginLeft:270,
+    color: 'red',
+    marginLeft:280,
 
   },
 });
 
-export default Song;
+export default MusicScreen6;

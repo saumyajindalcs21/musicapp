@@ -9,7 +9,7 @@ export function Profile({ navigation }) {
   const [message, setMessage] = useState("");
 
   const handleSaveData = () => {
-    setMessage("New music added successfully");
+    setMessage("Music data added successfully");
     setMusicName("");
     setSingerName("");
 
