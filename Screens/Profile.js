@@ -1,52 +1,85 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, StyleSheet, Button } from "react-native";
-import { Feather } from '@expo/vector-icons';
+import { View, Text, TextInput, StyleSheet, Button, Image, TouchableOpacity } from "react-native";
 import { Footer } from "../Components/Footer";
+import * as ImagePicker from 'expo-image-picker'; // Import the expo-image-picker module
+import Constants from 'expo-constants'; // Import Constants from expo
 
 export function Profile({ navigation }) {
   const [musicName, setMusicName] = useState("");
   const [singerName, setSingerName] = useState("");
   const [message, setMessage] = useState("");
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleSaveData = () => {
     setMessage("Music data added successfully");
     setMusicName("");
     setSingerName("");
+    setSelectedImage(null);
 
     setTimeout(() => {
       setMessage("");
     }, 1500);
   };
 
+  const handleSelectImage = async () => {
+    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (status !== 'granted') {
+      console.log('Permission to access the gallery was denied.');
+      return;
+    }
+
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+    if (!result.canceled) {
+      // Instead of using 'uri', access selected assets through 'assets' array
+      const selectedAsset = result.assets[0];
+      setSelectedImage({ uri: selectedAsset.uri });
+    }
+  };
+
   return (
     <View style={styles.container}>
-        <View style={{ marginBottom: 27 }}></View>
-        <View style= {styles.upperdata}>
-      <Text style={styles.title}>Data from FireStore Database</Text>
-      <View style={styles.content}>
-        <TextInput
-          style={[styles.input, { color: 'white' }]}
-          placeholder="Enter music name"
-          placeholderTextColor="white"
-          value={musicName}
-          onChangeText={setMusicName}
-        />
+      <View style={{ marginBottom: 27 }}></View>
+      <View style={styles.upperdata}>
+        <Text style={styles.title}>Data from FireStore Database</Text>
+        <View style={styles.content}>
+          <TextInput
+            style={[styles.input, { color: 'white' }]}
+            placeholder="Enter music name"
+            placeholderTextColor="white"
+            value={musicName}
+            onChangeText={setMusicName}
+          />
 
-        <TextInput
-          style={[styles.input, { color: 'white' }]}
-          placeholder="Enter singer name"
-          placeholderTextColor="white"
-          value={singerName}
-          onChangeText={setSingerName}
-        />
-        <View style={{ marginBottom: 12 }}></View>
-        <Button title="Save Data" onPress={handleSaveData} />
+          <TextInput
+            style={[styles.input, { color: 'white' }]}
+            placeholder="Enter singer name"
+            placeholderTextColor="white"
+            value={singerName}
+            onChangeText={setSingerName}
+          />
 
-        {message ? <Text style={styles.message}>{message}</Text> : null}
-      </View>
+          {/* Image Picker Button */}
+          <TouchableOpacity style={styles.selectImageButton} onPress={handleSelectImage}>
+            <Text style={styles.selectImageButtonText}>Select Image</Text>
+          </TouchableOpacity>
+
+          {selectedImage && (
+            <Image source={selectedImage} style={styles.previewImage} />
+          )}
+
+          <View style={{ marginBottom: 12 }}></View>
+          <Button title="Save Data" onPress={handleSaveData} />
+
+          {message ? <Text style={styles.message}>{message}</Text> : null}
+        </View>
       </View>
       <Footer navigation={navigation}/>
-      </View>
+    </View>
   );
 }
 
@@ -89,5 +122,22 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: 'green',
     fontWeight: 'bold',
+  },
+  selectImageButton: {
+    backgroundColor: '#3498db',
+    padding: 10,
+    borderRadius: 20,
+    marginBottom: 10,
+  },
+  selectImageButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  previewImage: {
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
+    marginBottom: 10,
   },
 });
