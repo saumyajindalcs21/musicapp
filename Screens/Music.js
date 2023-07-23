@@ -8,24 +8,7 @@ import Song from '../Song';
 export function Music({ navigation }) {
   const songUrls = [
    
-    {
-      url: 'https://pwdown.info/110433/07.%20Mere%20Dholna.mp3',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQc72UlQORyB-jLXeaJlPZUCrMSedU4kwrw&usqp=CAU',
-      name: 'Mere Dholna',
-      singername: 'Shreya Goshal'
-    },
-    {
-      url: 'https://pwdown.info/14671/High%20Rated%20Gabru%20-%20Guru%20Randhawa.mp3',
-      image: 'https://www.pagalworld.tv/GpE34Kg9Gq/14671/118539-high-rated-gabru-guru-randhawa-mp3-song-300.jpg',
-      name: 'High Rated Gabru',
-      singername: 'Guru Randhawa',
-    },
-    {
-      url: 'https://pwdown.info/110745/06.%20Tum%20Dil%20Ki%20Dhadkan%20Mein.mp3',
-      image: 'https://www.pagalworld.tv/GpE34Kg9Gq/110745/thumb-dhadkan-300.jpg',
-      name: 'Tum Dil Ki Dhadkan Mein',
-      singername: 'Dhadkan',
-    },
+
   
     {
       url: 'https://pwdown.info/113198/09.%20Saat%20Samundar%20Paar.mp3',

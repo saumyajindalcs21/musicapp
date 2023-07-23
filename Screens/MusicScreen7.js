@@ -5,10 +5,10 @@ import { Feather } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
 
 const MusicScreen7 = () => {
-  const songUrl = 'https://pwdown.info/113622/The%20Monster%20Song%20-%20KGF%202.mp3'; // Replace with your song URL
-  const songName = 'Monster Song';
-  const singername = 'Adithi Sagar, Ravi Basrur';
-  const songimage = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/113622/149377-the-monster-song-kgf-2-mp3-song-300.jpg' };
+  const songUrl = 'https://pwdown.info/12983/02%20Naach%20Meri%20Jaan%20-%20Tubelight%20(Kamaal%20Khan)%20320Kbps.mp3'; // Replace with your song URL
+  const songName = 'Naach Meri Jaan';
+  const singername = 'Unknown';
+  const songimage = { uri: 'https://www.pagalworld.link/GpE34Kg9Gq/12983/thumb-tubelight-2017-hindi-mp3-songs11-300.jpg' };
   const [isPlaying, setIsPlaying] = useState(false);
   const [soundObject, setSoundObject] = useState(null);
   const [position, setPosition] = useState(0);

@@ -5,10 +5,10 @@ import { Feather } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
 
 const MusicScreen2 = () => {
-  const songUrl = 'https://firebasestorage.googleapis.com/v0/b/musicapp-6c355.appspot.com/o/songs%2FDosti%20-%20RRR.mp3?alt=media&token=0042457c-0de9-48cb-a9bc-6ae38957c62b'; // Replace with your song URL
-  const songName = 'Dosti - RRR';
+  const songUrl = 'https://pwdown.info/113754/Pasoori%20Nu%20-%20Arijit%20Singh.mp3'; // Replace with your song URL
+  const songName = 'Pasoori Nu';
   const singername = 'Unknown';
-  const songimage = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/113560/145826-dosti-rrr-mp3-song-2-300.jpg' };
+  const songimage = { uri: 'https://i0.wp.com/www.newsbugz.com/wp-content/uploads/2022/08/Satyaprem-Ki-Katha-Movie-1.jpg?w=1280&ssl=1' };
   const [isPlaying, setIsPlaying] = useState(false);
   const [soundObject, setSoundObject] = useState(null);
   const [position, setPosition] = useState(0);

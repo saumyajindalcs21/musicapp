@@ -8,26 +8,26 @@ import { Feather } from "@expo/vector-icons";
 const musicIcon = require("../assets/icons/musicbox.png");
 const menu = require("../assets/icons/menu.png");
 const searchkro = require("../assets/icons/searchkro.png");
-const ucard1 = { uri: 'https://images.hindustantimes.com/img/2022/01/09/550x309/Vidya_Balan_1641710054338_1641710070842.jpeg' };
-const ucard2 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/113560/145826-dosti-rrr-mp3-song-2-300.jpg' };
-const lcard1 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/12983/thumb-tubelight-2017-hindi-mp3-songs11-300.jpg' };
-const lcard2 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/113508/144634-husnn-hai-suhaana-new-coolie-no-1-mp3-song-300.jpg' };
+const ucard1 = { uri: 'https://i.ytimg.com/vi/5bKSaK94Z4A/maxresdefault.jpg' };
+const ucard2 = { uri: 'https://i0.wp.com/www.newsbugz.com/wp-content/uploads/2022/08/Satyaprem-Ki-Katha-Movie-1.jpg?w=1280&ssl=1' };
+const lcard1 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/14671/118539-high-rated-gabru-guru-randhawa-mp3-song-300.jpg' };
+const lcard2 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/110745/thumb-dhadkan-300.jpg' };
 const lcard3 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/113560/148454-komuram-bheemudo-rrr-hindi-mp3-song-300.jpg' };
 const lcard4 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/14156/thumb-emraan-hashmi-all-hit-mp3-songs-300.jpg' };
 const lcard5 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/12983/thumb-tubelight-2017-hindi-mp3-songs11-300.jpg' };
-const lcard6 = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/11393/thumb-falguni-pathak-dandiya-queen-hits-mp3-songs-300.jpg' };
+const lcard6 = { uri: 'https://www.pagalworld.link/GpE34Kg9Gq/111724/thumb-khilona-1970-300.jpg' };
 
 const user = require("../assets/icons/user.png");
 const like = require("../assets/icons/like.png");
 const filledLike = require("../assets/icons/filled-like.png");
 const umn1 = 'Mere Dholna';
-const umn2 = 'Dosti';
-const lmn1 = 'Mai Agar';
-const lmn2 = 'Husnn hai suhaana';
+const umn2 = 'Pasoori Nu';
+const lmn1 = '      High Rated Gabru';
+const lmn2 = '              Tum Dil Ki Dhadkan';
 const lmn3 = 'Komuram bheemudo ';
 const lmn4 = 'Zara Sa';
 const lmn5 = 'Naach meri Jaan';
-const lmn6 = 'Maine Payal Hai Chhankai';
+const lmn6 = 'Khilona Jaan Kar';
 const singnm = 'Unknown';
 
 export function Main() {
@@ -43,6 +43,24 @@ export function Main() {
  const tcard2=()=> {
   navigation.navigate('Screen2');
  };
+ const dcard1=()=> {
+  navigation.navigate('Screen3');
+ }
+ const dcard2=()=> {
+  navigation.navigate('Screen4');
+ }
+ const dcard3=()=> {
+  navigation.navigate('Screen5');
+ }
+ const dcard4=()=> {
+  navigation.navigate('Screen6');
+ }
+ const dcard5=()=> {
+  navigation.navigate('Screen7');
+ }
+ const dcard6=()=> {
+  navigation.navigate('Screen8');
+ }
 
   const handleLike = (index) => {
     setIsLiked((prevLiked) => {
@@ -153,7 +171,7 @@ export function Main() {
             </View>
           <View style={{ marginBottom: 17}}></View>
           <View>
-            <TouchableOpacity onPress={tcard1}>
+            <TouchableOpacity onPress={dcard1}>
               <View style={styles.musicCard}>
                 <View style={styles.musicCardCont}>
                   <Image source={lcard1} style={styles.musicImg} />
@@ -163,7 +181,7 @@ export function Main() {
     color:'orange',
     fontSize: 16,
     marginRight:'30%',
-    right:107,}}>{lmn1}</Text>
+    right:89,}}>{lmn1}</Text>
                     <View style={styles.musicSingerContainer}>
                       <Image source={user} style={styles.musicSinger} />
                       <Text style={styles.Singer}>{singnm}</Text>
@@ -180,7 +198,7 @@ export function Main() {
             </TouchableOpacity>
             <View style={{ marginBottom: 9 }}></View>
 
-            <TouchableOpacity onPress={tcard2}>
+            <TouchableOpacity onPress={dcard2}>
               <View style={styles.musicCard}>
                 <View style={styles.musicCardCont}>
                   <Image source={lcard2} style={styles.musicImg} />
@@ -190,7 +208,7 @@ export function Main() {
     color:'orange',
     fontSize: 16,
     marginRight:'30%',
-    right:72,}}>{lmn2}</Text>
+    right:102,}}>{lmn2}</Text>
                     <View style={styles.musicSingerContainer}>
                       <Image source={user} style={styles.musicSinger} />
                       <Text style={styles.Singer}>{singnm}</Text>
@@ -207,7 +225,7 @@ export function Main() {
             </TouchableOpacity>
             <View style={{ marginBottom: 9 }}></View>
 
-            <TouchableOpacity onPress={tcard1}>
+            <TouchableOpacity onPress={dcard3}>
               <View style={styles.musicCard}>
                 <View style={styles.musicCardCont}>
                   <Image source={lcard3} style={styles.musicImg} />
@@ -234,7 +252,7 @@ export function Main() {
             </TouchableOpacity>
             <View style={{ marginBottom: 9 }}></View>
 
-            <TouchableOpacity onPress={tcard1}>
+            <TouchableOpacity onPress={dcard4}>
               <View style={styles.musicCard}>
                 <View style={styles.musicCardCont}>
                   <Image source={lcard4} style={styles.musicImg} />
@@ -261,7 +279,7 @@ export function Main() {
             </TouchableOpacity>
             <View style={{ marginBottom: 9 }}></View>
 
-            <TouchableOpacity onPress={tcard1}>
+            <TouchableOpacity onPress={dcard5}>
               <View style={styles.musicCard}>
                 <View style={styles.musicCardCont}>
                   <Image source={lcard5} style={styles.musicImg} />
@@ -288,7 +306,7 @@ export function Main() {
             </TouchableOpacity>
             <View style={{ marginBottom: 9 }}></View>
 
-            <TouchableOpacity onPress={tcard1}>
+            <TouchableOpacity onPress={dcard6}>
               <View style={styles.musicCard}>
                 <View style={styles.musicCardCont}>
                   <Image source={lcard6} style={styles.musicImg} />
@@ -298,7 +316,7 @@ export function Main() {
     color:'orange',
     fontSize: 16,
     marginRight:'30%',
-    right:47,}}>{lmn6}</Text>
+    right:78,}}>{lmn6}</Text>
                     <View style={styles.musicSingerContainer}>
                       <Image source={user} style={styles.musicSinger} />
                       <Text style={styles.Singer}>{singnm}</Text>
@@ -438,11 +456,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   playboxItem: {
-    backgroundColor: "#2C3E50AA",
+    backgroundColor: "black",
     height: 55,
     width: "100%",
     padding: 10,
-    borderRadius: 15,
+    borderRadius: 25,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",

@@ -5,10 +5,10 @@ import { Feather } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
 
 const MusicScreen4 = () => {
-  const songUrl = 'https://pwdown.info/113622/The%20Monster%20Song%20-%20KGF%202.mp3'; // Replace with your song URL
-  const songName = 'Monster Song';
-  const singername = 'Adithi Sagar, Ravi Basrur';
-  const songimage = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/113622/149377-the-monster-song-kgf-2-mp3-song-300.jpg' };
+  const songUrl = 'https://pwdown.info/110745/06.%20Tum%20Dil%20Ki%20Dhadkan%20Mein.mp3'; // Replace with your song URL
+  const songName = 'Tum Dil Ki Dhadkan Mein';
+  const singername = 'Unknown';
+  const songimage = { uri: 'https://www.pagalworld.tv/GpE34Kg9Gq/110745/thumb-dhadkan-300.jpg' };
   const [isPlaying, setIsPlaying] = useState(false);
   const [soundObject, setSoundObject] = useState(null);
   const [position, setPosition] = useState(0);
